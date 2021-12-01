@@ -6,7 +6,7 @@
   <link href="https://www.jerome-blog.tech/atom.xml" rel="self"/>
   
   <link href="https://www.jerome-blog.tech/"/>
-  <updated>2021-11-30T11:32:54.491Z</updated>
+  <updated>2021-12-01T03:27:42.667Z</updated>
   <id>https://www.jerome-blog.tech/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java-basic-1</title>
+    <link href="https://www.jerome-blog.tech/2021/12/01/java-basic-1/"/>
+    <id>https://www.jerome-blog.tech/2021/12/01/java-basic-1/</id>
+    <published>2021-12-01T03:25:54.000Z</published>
+    <updated>2021-12-01T03:27:42.667Z</updated>
+    
+    <content type="html"><![CDATA[<hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+</summary>
+      
+    
+    
+    
+    <category term="笔记" scheme="https://www.jerome-blog.tech/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="java, 笔记" scheme="https://www.jerome-blog.tech/tags/java-%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
