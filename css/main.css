@@ -576,6 +576,26 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 }
 
 }
+.highlight:hover .copy-btn,
+pre:hover .copy-btn {
+  opacity: 1;
+}
+.copy-btn {
+  color: #333;
+  cursor: pointer;
+  line-height: 1.6;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  font-size: 0.8125em;
+  right: 4px;
+  top: 8px;
+}
 code,
 kbd,
 figure.highlight,
@@ -1547,7 +1567,6 @@ pre code {
   border: 1px solid #eee;
   max-width: 120px;
   padding: 2px;
-  border-radius: 50%;
   transition: transform 1s ease-out;
 }
 .site-author-image:hover {
@@ -1843,6 +1862,12 @@ pre code {
   margin: 0 5px;
   animation: icon-animate 1.33s ease-in-out infinite;
 }
+.busuanzi-count #busuanzi_container_site_uv {
+  display: none;
+}
+.busuanzi-count #busuanzi_container_site_pv {
+  display: none;
+}
 @-moz-keyframes icon-animate {
   0%, 100% {
     transform: scale(1);
@@ -1914,16 +1939,36 @@ pre code {
 }
 .back-to-top {
   font-size: 12px;
-  margin: 8px -10px -20px;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-.back-to-top.back-to-top-on {
+  bottom: -100px;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 0 6px;
+  transition: bottom 0.2s ease-in-out;
+  background: #222;
   cursor: pointer;
   opacity: 0.6;
+  position: fixed;
+  z-index: 1300;
+  right: 30px;
 }
-.back-to-top.back-to-top-on:hover {
+@media (max-width: 991px) {
+  .back-to-top {
+    right: 20px;
+  }
+}
+.back-to-top:hover {
   opacity: 0.8;
+}
+@media (max-width: 991px) {
+  .back-to-top {
+    opacity: 0.8;
+  }
+}
+.back-to-top:hover {
+  color: #fc6423;
+}
+.back-to-top.back-to-top-on {
+  bottom: 30px;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -2273,6 +2318,9 @@ pre code {
 .post-meta-item-icon {
   margin-right: 3px;
 }
+.post-meta-item-text {
+  display: none;
+}
 @media (max-width: 991px) {
   .post-meta-item-text {
     display: none;
@@ -2390,6 +2438,10 @@ pre code {
 }
 .post-reward div span {
   display: block;
+}
+.post-reward div:hover span {
+  animation: next-roll 0.1s infinite linear;
+  pointer-events: none;
 }
 .post-reward img {
   display: inline-block;
@@ -2797,24 +2849,6 @@ mark.search-keyword {
   color: #ff2a2a;
   font-weight: bold;
 }
-.popular-posts-header {
-  border-bottom: 1px solid #eee;
-  font-size: 1.125em;
-  margin-bottom: 10px;
-  margin-top: 60px;
-}
-.popular-posts {
-  padding: 0;
-}
-.popular-posts .popular-posts-item {
-  margin-left: 2em;
-}
-.popular-posts .popular-posts-item .popular-posts-title {
-  font-size: 0.875em;
-  font-weight: normal;
-  line-height: 2.4;
-  margin: 0;
-}
 .use-motion .animated {
   animation-fill-mode: none;
   visibility: inherit;
@@ -3048,12 +3082,19 @@ mark.search-keyword {
 .links-of-author-item a:hover {
   background: var(--body-bg-color);
 }
-.back-to-top {
-  background: var(--body-bg-color);
-  margin: -4px -10px -18px;
+.links-of-blogroll-item {
+  display: inline-block;
+  max-width: 100%;
+  margin: 5px 0 0;
 }
-.back-to-top.back-to-top-on {
-  margin-top: 16px;
+.links-of-blogroll-item a {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .main-inner > .sub-menu,
 .main-inner > .post-block,
